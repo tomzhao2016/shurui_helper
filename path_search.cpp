@@ -39,12 +39,57 @@ int main()
     for(int row = 0;row < n;row++){
     	for(int col=0;col < n;col++){
     		path_bt[row*n + col] = x[row]&x[col];
+    		std::cout << path_bt[0] << "yes" << '\n';
     	}
     }
-    	
-    std::cout << path_bt[0] << "yes" << '\n';
-    // find the path 
+    
+    // find the path - naive
 
+    std::vector<std::vector<int>> single_path_old;
+    for(int pos = 0; pos<n-1; pos++){
+    	
+    	std::vector<std::vector<int>> single_path_new;
+    	
+    	if(pos == 0){
+    		vector<int> row_vec;
+	    	vector<int> row_vec_name;
+    		for(int col = 0;col<n;col++){
+	    		if(path_bt[pos*n + col]!=0&&col != n-1){
+	    			// save numbers that not equal to zero
+	    			row_vec.push_back(path_bt[pos*n + col]); // Add path num to the row
+	    			row_vec_name.push_back(col); // Add path name to the row
+	    		}
+	    		else if(col == n-1){
+	    			path_num_total += single_path_old[1][idx]; 
+	    		}
+	    	}
+	    	single_path_new.push_back(row_vec_name);
+		    single_path_new.push_back(row_vec); // Add the row to the main vector
+    	}
+    	else{
+    		vec_size = single_path_old[0].size();
+    		vector<int> row_vec;
+	    	vector<int> row_vec_name;
+    		for (int idx = 0; idx<vec_size; idx++){
+    			col_start = single_path_old[0][idx];
+    			
+    			for(int col = col_start;col<n;col++){
+		    		if(path_bt[col_start*n + col]!=0&&col != n-1){
+		    			// save numbers that not equal to zero
+		    			row_vec.push_back(path_bt[col_start*n + col]*single_path_old[1][idx]); // Add path num to the row
+		    			row_vec_name.push_back(col); // Add path name to the row
+		    		}
+	    		}
+	    		else if(col == n-1){
+	    			path_num_total += single_path_old[1][idx]; 
+	    		}
+    		}
+    		single_path_new.push_back(row_vec_name);
+		    single_path_new.push_back(row_vec);
+    	}
+    	single_path_old = single_path_new;
+
+    }
 
 
 
