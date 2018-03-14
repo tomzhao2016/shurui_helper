@@ -17,10 +17,10 @@ int ReadNumbers(std::vector<int> x)
     std::cout << "Enter n"<<n;
 
     int num;
-    
     std::cout << "Enter Numbers: " << '\n';
-    while(std::cin >> num)
+    for(int j = 0;j < n ;j++)
     {
+    	std::cin >> num
         x.push_back(num);
         std::cout << num << " was added to the Vector" << '\n';
     }
@@ -32,5 +32,6 @@ int main()
 	std::vector<int> x;
 	int n;
     n = ReadNumbers(x);
+    std::cout << x.size() << " was added to the Vector" << '\n';
     std::cout << n << " was added to the Vector" << '\n';
 }
