@@ -18,11 +18,11 @@ int ReadNumbers()
 
     int num;
     vector<int> x;
-    cout << "Enter Numbers: " << '\n';
-    while(cin >> num)
+    std::cout << "Enter Numbers: " << '\n';
+    while(std::cin >> num)
     {
         x.push_back(num);
-        cout << num << " was added to the Vector" << '\n';
+        std::cout << num << " was added to the Vector" << '\n';
     }
 }
 
