@@ -51,8 +51,8 @@ int main()
     	std::vector<std::vector<int>> single_path_new;
     	
     	if(pos == 0){
-    		vector<int> row_vec;
-	    	vector<int> row_vec_name;
+    		std::vector<int> row_vec;
+	    	std::vector<int> row_vec_name;
     		for(int col = 0;col<n;col++){
 	    		if(path_bt[pos*n + col]!=0&&col != n-1){
 	    			// save numbers that not equal to zero
@@ -67,9 +67,9 @@ int main()
 		    single_path_new.push_back(row_vec); // Add the row to the main vector
     	}
     	else{
-    		vec_size = single_path_old[0].size();
-    		vector<int> row_vec;
-	    	vector<int> row_vec_name;
+    		int vec_size = single_path_old[0].size();
+    		std::vector<int> row_vec;
+	    	std::vector<int> row_vec_name;
     		for (int idx = 0; idx<vec_size; idx++){
     			col_start = single_path_old[0][idx];
     			
