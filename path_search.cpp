@@ -10,7 +10,7 @@
 
 int main(void){
 	int a;
-	std::in>>a>>std::endl;
+	std::cin>>a>>std::endl;
 	std::cout<<a<<std::endl;
 
 }
