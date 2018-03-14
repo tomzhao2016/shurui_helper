@@ -9,7 +9,7 @@
 
 
 
-int ReadNumbers()
+int ReadNumbers(std::vector<int> x)
 {
 	int n;
 	std::cout << "Enter n: "; // no flush needed
@@ -17,16 +17,20 @@ int ReadNumbers()
     std::cout << "Enter n"<<n;
 
     int num;
-    std::vector<int> x;
+    
     std::cout << "Enter Numbers: " << '\n';
     while(std::cin >> num)
     {
         x.push_back(num);
         std::cout << num << " was added to the Vector" << '\n';
     }
+    return n;
 }
 
 int main()
 {
-    ReadNumbers();
+	std::vector<int> x;
+	int n;
+    n = ReadNumbers(x);
+    std::cout << n << " was added to the Vector" << '\n';
 }
