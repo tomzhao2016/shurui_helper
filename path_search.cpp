@@ -9,6 +9,8 @@
 
 
 int main(void){
-	std::cout<<"hello world"<<std::endl;
+	int a;
+	std::in>>a>>std::endl;
+	std::cout<<a<<std::endl;
 
 }
