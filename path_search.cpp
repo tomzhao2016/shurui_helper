@@ -44,7 +44,7 @@ int main()
     		else{
     			path_bt[row*n + col] = x[row]&x[col];
     		}
-    		std::cout << path_bt[0] << "yes" << '\n';
+    		std::cout << path_bt[row*n + col] << "yes" << '\n';
     	}
     }
     
