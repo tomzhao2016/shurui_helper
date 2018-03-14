@@ -34,7 +34,8 @@ int main()
 
     int path_num = 0;
     // initialize a matrix
-    std::cout << 700&8 << "yes" << '\n';
+    int z = 100&8;
+    std::cout << z << "yes" << '\n';
     // find the path 
 
 
