@@ -79,7 +79,7 @@ int main()
     			int col_start = single_path_old[0][idx];
     			
     			for(int col = col_start;col<n;col++){
-		    		if(path_bt[col_start*n + col]!=0&&col != n-1){
+		    		if(path_bt[col_start*n + col]!=0&&col_start != n-1){
 		    			// save numbers that not equal to zero
 		    			row_vec.push_back(path_bt[col_start*n + col]*single_path_old[1][idx]); // Add path num to the row
 		    			row_vec_name.push_back(col); // Add path name to the row
