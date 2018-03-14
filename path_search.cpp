@@ -49,5 +49,5 @@ int main()
 
 
     //std::cout << x.size() << " was added to the Vector" << '\n';
-    std::cout << path_num%991127 << " was added to the Vector" << '\n';
+    std::cout << path_num_total%991127 << " was added to the Vector" << '\n';
 }
