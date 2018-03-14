@@ -25,7 +25,17 @@ int ReadNumbers(std::vector<int> &x)
     }
     return n;
 }
-
+int one_num(int a){
+	int cnt = 0;
+	for(){
+		if (a%2 == 1)
+			cnt++;
+		if(a<2)
+			break;
+		a = a/2;
+	}
+	return cnt;
+}
 int main()
 {
 	std::vector<int> x;
@@ -33,7 +43,7 @@ int main()
     n = ReadNumbers(x);
 
 
-    int path_num_total = 1;
+    int path_num_total = 0;
     // initialize a matrix
     int *path_bt = (int*)malloc(n*n*sizeof(int));
     for(int row = 0;row < n;row++){
@@ -42,7 +52,7 @@ int main()
     			path_bt[row*n + col] = 0;
     		}
     		else{
-    			path_bt[row*n + col] = x[row]&x[col];
+    			path_bt[row*n + col] = one_num(x[row]&x[col]);
     		}
     		std::cout << path_bt[row*n + col] << "yes" << '\n';
     	}
