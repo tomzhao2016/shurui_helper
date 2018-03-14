@@ -33,7 +33,7 @@ int main()
     n = ReadNumbers(x);
 
 
-    int path_num_total = 0;
+    int path_num_total = 1;
     // initialize a matrix
     int *path_bt = (int*)malloc(n*n*sizeof(int));
     for(int row = 0;row < n;row++){
@@ -96,7 +96,6 @@ int main()
     	single_path_old = single_path_new;
 
     }
-
 
 
     //std::cout << x.size() << " was added to the Vector" << '\n';
