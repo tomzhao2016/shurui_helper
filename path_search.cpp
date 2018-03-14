@@ -84,7 +84,7 @@ int main()
 		    			row_vec.push_back(path_bt[col_start*n + col]*single_path_old[1][idx]); // Add path num to the row
 		    			row_vec_name.push_back(col); // Add path name to the row
 		    		}
-		    		else if(col == n-1){
+		    		else if(col_start == n-1 ){
 		    			path_num_total += single_path_old[1][idx]; 
 		    		}
 	    		}
