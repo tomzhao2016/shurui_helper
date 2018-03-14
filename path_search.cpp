@@ -27,7 +27,7 @@ int ReadNumbers(std::vector<int> &x)
 }
 int one_num(int a){
 	int cnt = 0;
-	for(){
+	for(;;){
 		if (a%2 == 1)
 			cnt++;
 		if(a<2)
