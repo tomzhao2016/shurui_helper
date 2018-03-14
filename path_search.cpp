@@ -35,7 +35,7 @@ int main()
 
     int path_num_total = 0;
     // initialize a matrix
-    int *path_bt;
+    int *path_bt = malloc(n*n*sizeof(int));
     for(int row = 0;row < n;row++){
     	for(int col=0;col < n;col++){
     		path_bt[row*n + col] = x[row]&x[col];
