@@ -8,15 +8,25 @@
 #include <vector>
 
 
-struct stdInput {
-    int n;
-    stdInput() {
-       std::cout << "Enter n: "; // no flush needed
-       std::cin >> n;
+
+int ReadNumbers()
+{
+	int n;
+	std::cout << "Enter n: "; // no flush needed
+    std::cin >> n;
+    std::cout << "Enter n"<<n;
+
+    int num;
+    vector<int> x;
+    cout << "Enter Numbers: " << '\n';
+    while(cin >> num)
+    {
+        x.push_back(num);
+        cout << num << " was added to the Vector" << '\n';
     }
-};
-stdInput f; // static object
+}
+
 int main()
 {
-    std::cout << "f.n is " << f.n << '\n';
+    ReadNumbers();
 }
