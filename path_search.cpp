@@ -20,7 +20,7 @@ int ReadNumbers(std::vector<int> x)
     std::cout << "Enter Numbers: " << '\n';
     for(int j = 0;j < n ;j++)
     {
-    	std::cin >> num
+    	std::cin >> num;
         x.push_back(num);
         std::cout << num << " was added to the Vector" << '\n';
     }
