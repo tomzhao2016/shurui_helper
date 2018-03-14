@@ -8,9 +8,15 @@
 #include <vector>
 
 
-int main(void){
-	int a;
-	std::cin>>a>>std::endl;
-	std::cout<<a<<std::endl;
-
+struct stdInput {
+    int n;
+    Foo() {
+       std::cout << "Enter n: "; // no flush needed
+       std::cin >> n;
+    }
+};
+stdInput f; // static object
+int main()
+{
+    std::cout << "f.n is " << f.n << '\n';
 }
