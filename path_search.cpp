@@ -10,7 +10,7 @@
 
 struct stdInput {
     int n;
-    Foo() {
+    stdInput() {
        std::cout << "Enter n: "; // no flush needed
        std::cin >> n;
     }
