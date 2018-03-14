@@ -32,10 +32,17 @@ int main()
 	int n;
     n = ReadNumbers(x);
 
-    int path_num = 0;
+
+    int path_num_total = 0;
     // initialize a matrix
-    int z = 7&7;
-    std::cout << z << "yes" << '\n';
+    int *path_bt;
+    for(int row = 0;row < n;row++){
+    	for(int col=0;col < n;col++){
+    		path_bt[row*n + col] = x[row]&x[col];
+    	}
+    }
+    	
+    std::cout << path_bt[0] << "yes" << '\n';
     // find the path 
 
 
