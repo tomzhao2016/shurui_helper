@@ -38,8 +38,13 @@ int main()
     int *path_bt = (int*)malloc(n*n*sizeof(int));
     for(int row = 0;row < n;row++){
     	for(int col=0;col < n;col++){
-    		path_bt[row*n + col] = x[row]&x[col];
-    		std::cout << path_bt[0] << "yes" << '\n';
+    		if (col<=row){
+    			path_bt[row*n + col] = 0;
+    		}
+    		else{
+    			path_bt[row*n + col] = x[row]&x[col];
+    		}
+    		//std::cout << path_bt[0] << "yes" << '\n';
     	}
     }
     
