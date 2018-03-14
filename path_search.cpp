@@ -17,7 +17,7 @@ int ReadNumbers()
     std::cout << "Enter n"<<n;
 
     int num;
-    vector<int> x;
+    std::vector<int> x;
     std::cout << "Enter Numbers: " << '\n';
     while(std::cin >> num)
     {
